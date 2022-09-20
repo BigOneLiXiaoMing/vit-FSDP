@@ -14,8 +14,8 @@ from utils import read_split_data, train_one_epoch, evaluate
 # 新增1:依赖
 import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
-from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-
+# from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+from fairscale.nn.data_parallel import FullyShardedDataParallel as FSDP
 
 
 def main(args):
